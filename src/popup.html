@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playlist Duration Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📊 Playlist Duration</h1>
+    </div>
+    
+    <div id="loading" class="loading">
+      <div class="spinner"></div>
+      <p>Calculating...</p>
+    </div>
+    
+    <div id="error" class="error" style="display: none;">
+      <p id="errorMessage"></p>
+    </div>
+    
+    <div id="results" class="results" style="display: none;">
+      <div class="result-item">
+        <span class="label">Total Duration:</span>
+        <span class="value" id="totalDuration">--:--:--</span>
+      </div>
+      
+      <div class="result-item">
+        <span class="label">Videos Counted:</span>
+        <span class="value" id="videosCount">0</span>
+      </div>
+      
+      <div class="result-item">
+        <span class="label">Videos Not Counted:</span>
+        <span class="value" id="videosNotCounted">0</span>
+      </div>
+      
+      <button id="recalculate" class="btn">Recalculate</button>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
