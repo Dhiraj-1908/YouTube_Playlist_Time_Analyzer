@@ -84,10 +84,12 @@ function calculatePlaylistDuration() {
   });
   
   return {
-    totalDuration: formatDuration(totalSeconds),
-    videosCount: videosCount,
-    videosNotCounted: videosNotCounted
-  };
+  totalDuration: formatDuration(totalSeconds),
+  at15x: formatDuration(Math.floor(totalSeconds / 1.5)),
+  at2x: formatDuration(Math.floor(totalSeconds / 2)),
+  videosCount: videosCount,
+  videosNotCounted: videosNotCounted
+};
 }
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {

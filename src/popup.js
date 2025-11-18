@@ -40,6 +40,8 @@ async function calculateDuration() {
         }
         
         document.getElementById('totalDuration').textContent = response.totalDuration;
+        document.getElementById('at15x').textContent = response.at15x;
+        document.getElementById('at2x').textContent = response.at2x; 
         document.getElementById('videosCount').textContent = response.videosCount;
         document.getElementById('videosNotCounted').textContent = response.videosNotCounted;
         
